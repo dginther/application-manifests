@@ -30,12 +30,12 @@
       metric_relabel_configs:
         - action: replace
           source_labels: [id]
-          regex: '^/machine\.slice/machine-rkt\\x2d([^\\]+)\\.+/([^/]+)\.service$'
+          regex: '^/machine.slice/machine-rkt\\x2d([^\\]+)\\.+/([^/]+).service$'
           target_label: rkt_container_name
           replacement: '${2}-${1}'
         - action: replace
           source_labels: [id]
-          regex: '^/system\.slice/(.+)\.service$'
+          regex: '^/system.slice/(.+).service$'
           target_label: systemd_service_name
           replacement: '${1}'"
 }
