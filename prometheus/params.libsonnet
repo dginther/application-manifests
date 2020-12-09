@@ -5,8 +5,7 @@
   replicas: 1,
   servicePort: 9090,
   type: "LoadBalancer",
-  config: "
-    scrape_configs:
+  config: "scrape_configs:
     - job_name: kubernetes-nodes-cadvisor
       scrape_interval: 10s
       scrape_timeout: 10s
