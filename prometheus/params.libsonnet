@@ -5,6 +5,9 @@
   replicas: 1,
   servicePort: 9090,
   type: "LoadBalancer",
+  vol_name: "config",
+  vol_mount_path: "/etc/prometheus",
+  vol_configmap_name: "configuration",
   config: "scrape_configs:
     - job_name: kubernetes-nodes-cadvisor
       scrape_interval: 10s
