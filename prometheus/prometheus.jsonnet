@@ -55,5 +55,18 @@ local params = import 'params.libsonnet';
             }
          }
       }
+   },
+   {
+      "apiVersion": "v1",
+      "kind": "ConfigMap",
+      "metadata": {
+         "name": params.name,
+         "labels": {
+            "name": params.name,
+         },
+      },
+      "data": {         
+         "prometheus.yml": params.config
+      },
    }
 ]
