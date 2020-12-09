@@ -5,5 +5,5 @@
   replicas: 1,
   servicePort: 9090,
   type: "LoadBalancer",
-  config: ""
+  config: "test"
 }
