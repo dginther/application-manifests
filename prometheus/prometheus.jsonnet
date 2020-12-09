@@ -82,12 +82,5 @@ local params = import 'params.libsonnet';
       "data": {         
          "prometheus.yml": params.config
       },
-   },
-   {
-      "apiVersion": "v1",
-      "kind": "Pod",
-      "data": {         
-         "prometheus.yml": params.config
-      },
    }
 ]
